@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Esteira de fim de ano</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f3efe7; --paper:#fbf9f4; --ink:#1a1916; --soft:#5d5a53; --faint:#8f8a80; --line:#e2dccf;
+    --olv:#3f5a3a; --ogro:#8a3b22; --tmk:#b0472f; --rob:#2f4a6b; --natal:#a32a2a; --alert:#9a6a00;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){--bg:#121110; --paper:#1b1a18; --ink:#f2eee6; --soft:#b9b3a7; --faint:#837d72; --line:#2d2b27;
+      --olv:#9dbb8f; --ogro:#e0906f; --tmk:#ee8a72; --rob:#8fb0d8; --natal:#f07a7a; --alert:#e2b54f;}
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-wrap:anywhere}
+  .wrap{max-width:880px;margin:0 auto;padding:0 16px}
+  a{color:inherit}
+
+  header{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin:0 0 18px}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:800;font-size:clamp(44px,9vw,84px);line-height:.95;letter-spacing:-.03em;margin:0}
+  h1 em{font-style:italic;font-weight:400;color:var(--soft)}
+  .lede{max-width:600px;color:var(--soft);font-size:18px;margin:26px 0 0}
+
+  .deadline{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:30px}
+  .deadline div{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .deadline b{display:block;font-family:Fraunces,serif;font-size:28px;line-height:1.1}
+  .deadline span{font-size:13px;color:var(--soft)}
+  .note{margin-top:18px;border-left:3px solid var(--alert);padding:6px 0 6px 14px;color:var(--soft);font-size:15px}
+
+  nav.index{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:36px 0 0}
+  nav.index a{display:block;text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 14px 16px;transition:transform .15s,border-color .15s}
+  nav.index a:hover{transform:translateY(-2px);border-color:var(--c)}
+  nav.index .num{font-family:Fraunces,serif;font-size:13px;color:var(--c);font-weight:600}
+  nav.index .t{display:block;font-weight:600;font-size:15px;line-height:1.3;margin-top:4px}
+  nav.index .b{display:block;font-size:12px;color:var(--faint);margin-top:4px}
+
+  section.job{padding:64px 0;border-bottom:1px solid var(--line)}
+  .tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--c)}
+  .tag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(32px,5.5vw,48px);line-height:1.05;letter-spacing:-.02em;margin:12px 0 8px}
+  h2 .n{color:var(--c);font-weight:400;font-style:italic;margin-right:.3em}
+  .key{display:inline-block;font-size:13px;color:var(--soft);border:1px solid var(--line);border-radius:999px;padding:4px 12px;margin:6px 6px 0 0;background:var(--paper)}
+  .key.hot{border-color:var(--c);color:var(--c);font-weight:600}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:32px}
+  @media (max-width:720px){.grid{grid-template-columns:1fr}}
+  .grid>*{min-width:0}
+  h3{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:600;margin:0 0 10px}
+  p{margin:0 0 12px}
+  .block + .block{margin-top:26px}
+
+  .deliv{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px}
+  .deliv + .deliv{margin-top:16px}
+  .deliv ul{list-style:none;margin:0;padding:0}
+  .deliv li{display:flex;gap:14px;padding:12px 0;border-top:1px solid var(--line)}
+  .deliv li:first-child{border-top:0;padding-top:0}
+  .deliv li:last-child{padding-bottom:0}
+  .deliv .ic{flex:none;min-width:28px;height:28px;padding:0 6px;border-radius:8px;background:color-mix(in srgb,var(--c) 14%,transparent);color:var(--c);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+  .deliv strong{display:block;font-weight:600}
+  .deliv span.d{display:block;font-size:14px;color:var(--soft)}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .chip{font-size:12px;font-weight:500;padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--soft);text-decoration:none}
+  a.chip:hover{border-color:var(--c);color:var(--c)}
+  .chip.date{border-color:var(--c);color:var(--c);font-weight:600}
+  .chip.wait{border-style:dashed}
+
+  .copy{border-left:3px solid var(--c);padding:4px 0 4px 16px;margin:10px 0}
+  .copy .h{font-family:Fraunces,serif;font-size:20px;font-weight:600;line-height:1.25}
+  .copy .s{font-size:14px;color:var(--soft)}
+
+  figure{margin:0}
+  figure img{display:block;width:100%;max-width:300px;border-radius:16px;border:1px solid var(--line);box-shadow:0 18px 40px -24px rgba(0,0,0,.45)}
+  figcaption{font-size:13px;color:var(--faint);margin-top:10px}
+
+  .wheel{width:160px;height:160px;border-radius:50%;position:relative;border:3px solid var(--ink);
+    background:conic-gradient(var(--c) 0 72deg,color-mix(in srgb,var(--c) 75%,var(--paper)) 72deg 144deg,color-mix(in srgb,var(--c) 50%,var(--paper)) 144deg 216deg,color-mix(in srgb,var(--c) 30%,var(--paper)) 216deg 288deg,color-mix(in srgb,var(--c) 12%,var(--paper)) 288deg 360deg)}
+  .wheel::after{content:"";position:absolute;left:50%;top:50%;width:4px;height:66px;background:var(--ink);transform:translate(-50%,-100%) rotate(40deg);transform-origin:50% 100%;border-radius:2px}
+  .legend{display:flex;gap:10px 14px;flex-wrap:wrap;margin-top:12px;font-size:13px;color:var(--soft)}
+  .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle;border:1px solid var(--line)}
+
+  .scale{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;margin-top:6px}
+  .frame{border:2px solid var(--c);border-radius:3px;background:color-mix(in srgb,var(--c) 7%,transparent);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:var(--c);text-align:center;line-height:1.2}
+  .cap{font-size:12px;color:var(--faint);text-align:center;margin-top:6px}
+
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:15px}
+  th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-weight:600}
+  td.num{font-family:Fraunces,serif;font-size:20px;font-weight:600;white-space:nowrap}
+  .total td{border-bottom:0;font-weight:600}
+  .tbl{overflow-x:auto}
+
+  footer{padding:48px 0 72px;color:var(--faint);font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Briefing de design · Grupo ROB · atualizado em 18/11/2026</p>
+    <h1>Esteira <em>de fim de ano</em></h1>
+    <p class="lede">O que está em pauta agora, por prioridade. A meta é chegar em 20/12 com tudo fechado e entregue, inclusive o que vai pra gráfica pro começo do ano, pra todo mundo atravessar o recesso tranquilo.</p>
+
+    <div class="deadline">
+      <div><b>25/11</b><span>Cartão de eventos · Sushi Araruama</span></div>
+      <div><b>20/12</b><span>Todas as artes finalizadas e aprovadas</span></div>
+      <div><b>04/01</b><span>Impressos recebidos na loja da Região Oceânica</span></div>
+    </div>
+    <p class="note">A gráfica de Niterói que sempre usamos fica fechada de 20/12 a 10/01, e muitos fornecedores entram em recesso. Quem produz cada peça (freela ou IA/agente) e quem opera ainda vai ser combinado. Só o prazo do cartão de eventos está fechado.</p>
+
+    <nav class="index">
+      <a href="#p1" style="--c:var(--olv)"><span class="num">01</span><span class="t">Prioridade 1</span><span class="b">Pedidos da Clarissa</span></a>
+      <a href="#natal" style="--c:var(--natal)"><span class="num">02</span><span class="t">Natal</span><span class="b">Todas as marcas</span></a>
+      <a href="#reveillon" style="--c:var(--olv)"><span class="num">03</span><span class="t">Réveillon Araruama</span><span class="b">Øliver's · 31/12</span></a>
+      <a href="#oceanica" style="--c:var(--olv)"><span class="num">04</span><span class="t">Região Oceânica</span><span class="b">Øliver's · 08/01</span></a>
+      <a href="#expansao" style="--c:var(--rob)"><span class="num">05</span><span class="t">Expansão</span><span class="b">Grupo ROB</span></a>
+      <a href="#mensal" style="--c:var(--soft)"><span class="num">06</span><span class="t">Fluxo mensal</span><span class="b">Volume por marca</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- 01 PRIORIDADE 1 -->
+<section class="job" id="p1" style="--c:var(--olv)">
+  <div class="wrap">
+    <span class="tag">Prioridade 1 · pedidos da Clarissa</span>
+    <h2><span class="n">01</span>Salão e eventos</h2>
+    <span class="key hot">Cartão de eventos até 25/11</span><span class="key">Salão Øliver's: prazo a combinar</span>
+
+    <div class="grid">
+      <div>
+        <div class="block">
+          <h3>Contexto</h3>
+          <p>Hoje o cliente não sabe quem é garçom e quem é cumim e é interrompido o tempo todo no rodízio. São peças simples que padronizam a experiência do salão da Øliver's. Também entram na loja nova da Região Oceânica.</p>
+        </div>
+        <div class="block">
+          <h3>Roleta de mesa · cinco posições</h3>
+          <p>Uma roleta por mesa, com ponteiro manual. É o próprio cliente que sinaliza, da mesa, o que quer receber.</p>
+          <div class="wheel" aria-hidden="true"></div>
+          <div class="legend">
+            <span><i style="background:var(--c)"></i>Satisfeito</span>
+            <span><i style="background:color-mix(in srgb,var(--c) 75%,var(--paper))"></i>Garçom</span>
+            <span><i style="background:color-mix(in srgb,var(--c) 50%,var(--paper))"></i>Salgadas e doces</span>
+            <span><i style="background:color-mix(in srgb,var(--c) 30%,var(--paper))"></i>Só doce</span>
+            <span><i style="background:color-mix(in srgb,var(--c) 12%,var(--paper))"></i>Só salgada</span>
+          </div>
+        </div>
+        <figure class="block">
+          <img src="referencia-roleta.png" alt="Referência: roleta de mesa em formato de dinossauro, com ponteiro e base de madeira">
+          <figcaption>Referência de formato: peça recortada, ilustrada, com ponteiro giratório e base. Fica em pé na mesa, legível de longe pro garçom.</figcaption>
+        </figure>
+      </div>
+      <div>
+        <div class="deliv">
+          <h3>Entregáveis</h3>
+          <ul>
+            <li><span class="ic">1</span><div><strong>Cartão de eventos · Sushi Araruama</strong><span class="d">Cartão de visita da Temakeria de Araruama. Vai pra Clarissa, que manda pra produção com o franqueado.</span>
+              <div class="copy"><div class="h">Faça o seu evento conosco!</div><div class="s">Telefone + QR Code da central (a mesma da Øliver's e da Temakeria)</div></div>
+              <div class="chips"><span class="chip date">Até 25/11</span><a class="chip" href="https://github.com/dev-seven7/cs-temakeria-universitaria/issues/252">tmk#252</a></div></div></li>
+            <li><span class="ic">3</span><div><strong>Uniformes por cargo</strong><span class="d">Cumim, garçom e gerente, com diferença visível entre eles</span><div class="chips"><a class="chip" href="https://github.com/dev-seven7/cs-olivers/issues/239">olv#239</a></div></div></li>
+            <li><span class="ic">1</span><div><strong>Broche</strong><span class="d">Na identidade visual da Øliver's, com espaço pra nome e cargo (preenchido com etiquetadora)</span><div class="chips"><a class="chip" href="https://github.com/dev-seven7/cs-olivers/issues/239">olv#239</a></div></div></li>
+            <li><span class="ic">1</span><div><strong>Roleta de mesa</strong><span class="d">Frente ilustrada + disco com as 5 posições + ponteiro + base</span><div class="chips"><span class="chip">Arquivo pra gráfica</span><span class="chip">Mockup na mesa</span><a class="chip" href="https://github.com/dev-seven7/cs-olivers/issues/144">olv#144</a></div></div></li>
+            <li><span class="ic">1</span><div><strong>Pulseira</strong><span class="d">Só quem é à la carte usa. Sem pulseira é rodízio, e o garçom não para na mesa. Básica, de papel, igual às de festa</span><div class="chips"><a class="chip" href="https://github.com/dev-seven7/cs-olivers/issues/144">olv#144</a></div></div></li>
+            <li><span class="ic">·</span><div><strong>Cardápio de salão impresso</strong><span class="d">A carta de vinhos já foi entregue. O cardápio aguarda a devolutiva da Clarissa: sabemos que vai ter alteração</span><div class="chips"><span class="chip wait">Aguardando Clarissa</span></div></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 NATAL -->
+<section class="job" id="natal" style="--c:var(--natal)">
+  <div class="wrap">
+    <span class="tag">Natal · Øliver's, Ogro e Temakeria</span>
+    <h2><span class="n">02</span>Campanha de Natal</h2>
+    <span class="key hot">Produtos de Natal no ar até 01/12</span>
+
+    <div class="grid">
+      <div>
+        <div class="block">
+          <h3>Contexto</h3>
+          <p>Cada marca lança um produto de Natal: <strong>Pizza de Rabanada</strong> (Øliver's), <strong>Ogro Bells</strong> (Ogro) e <strong>SushiTone</strong> (Temakeria). As fotos de produto são feitas no mesmo dia, em São Gonçalo. Na Øliver's, a dinâmica de Natal nas unidades deve sair com a Coca-Cola.</p>
+        </div>
+      </div>
+      <div>
+        <div class="deliv">
+          <h3>Entregáveis</h3>
+          <ul>
+            <li><span class="ic">1</span><div><strong>Carrossel · dinâmica de Natal nas unidades Øliver's</strong><span class="d">Explica como funciona a campanha nas lojas</span><div class="chips"><span class="chip">Feed 4:5</span><a class="chip" href="https://github.com/dev-seven7/cs-olivers/issues/243">olv#243</a></div></div></li>
+            <li><span class="ic">3</span><div><strong>Carrossel · lançamento do produto de Natal</strong><span class="d">Um por marca</span><div class="chips"><span class="chip">Feed 4:5</span></div></div></li>
+            <li><span class="ic">3</span><div><strong>Banners pros canais</strong><span class="d">Produto de Natal no iFood, no site/cardápio próprio e no 99, por marca</span></div></li>
+            <li><span class="ic">·</span><div><strong>Embalagem de Natal</strong><span class="d">Quantas e quais marcas, a confirmar</span><div class="chips"><span class="chip wait">A confirmar</span></div></div></li>
+            <li><span class="ic">·</span><div><strong>Campanha física nas unidades + roleta</strong><span class="d">Peças de salão da campanha: Christmas Ticket, brindes, caixa e cartinha do Noel (se fechar com a Coca-Cola)</span><div class="chips"><span class="chip wait">Coca-Cola a confirmar</span><a class="chip" href="https://github.com/dev-seven7/cs-olivers/issues/243">olv#243</a></div></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 REVEILLON -->
+<section class="job" id="reveillon" style="--c:var(--olv)">
+  <div class="wrap">
+    <span class="tag">Øliver's Araruama · Welcome 2027</span>
+    <h2><span class="n">03</span>Réveillon Araruama</h2>
+    <span class="key hot">Teaser 23/11</span><span class="key">Campanha oficial 25 a 30/11</span>
+
+    <div class="grid">
+      <div>
+        <div class="block">
+          <h3>Contexto</h3>
+          <p>Réveillon com ingresso por pessoa e tudo incluído, com setores Ouro, Prata e Bronze. O teaser usa conteúdo do ano passado. As peças oficiais saem junto com a landing page, quando os valores estiverem fechados.</p>
+        </div>
+      </div>
+      <div>
+        <div class="deliv">
+          <h3>Entregáveis</h3>
+          <ul>
+            <li><span class="ic">·</span><div><strong>Estáticos da campanha</strong><span class="d">Feed e stories anunciando a venda dos ingressos</span><div class="chips"><span class="chip date">25 a 30/11</span><a class="chip" href="https://github.com/dev-seven7/cs-olivers/issues/160">olv#160</a></div></div></li>
+            <li><span class="ic">1</span><div><strong>Bandeirola "Welcome 2027"</strong><span class="d">Kit da virada, com frase e logo da Øliver's</span><div class="chips"><span class="chip">Arquivo pra gráfica</span></div></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 REGIÃO OCEÂNICA -->
+<section class="job" id="oceanica" style="--c:var(--olv)">
+  <div class="wrap">
+    <span class="tag">Øliver's · loja nova</span>
+    <h2><span class="n">04</span>Região Oceânica</h2>
+    <span class="key">Treinamento 04/01</span><span class="key">Open 07/01</span><span class="key hot">Inauguração 08/01</span>
+
+    <div class="grid">
+      <div>
+        <div class="block">
+          <h3>Contexto</h3>
+          <p>A loja de Piratininga foi reformada pra ser um <strong>restaurante familiar</strong>, com Área Kids, oliveiras e quadros nas paredes. Tudo que é impresso precisa estar <strong>dentro da loja até 04/01</strong>, dia em que começa o treinamento. Por isso as artes fecham em 20/12.</p>
+        </div>
+        <div class="block">
+          <h3>Quadros · 20 artes</h3>
+          <p>Em vez de uma arte por moldura, são <strong>20 artes</strong>, pensando em <strong>3 a 4 quadros grandes por parede ou área</strong>. Universo da pizza, da marca e da Região Oceânica.</p>
+        </div>
+        <div class="block">
+          <h3>Escala do adesivo</h3>
+          <div class="scale"><div><div class="frame" style="width:75px;height:105px">porta</div><div class="cap">1,50 × 2,10 m</div></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="deliv">
+          <h3>Loja</h3>
+          <ul>
+            <li><span class="ic">20</span><div><strong>Artes de quadro</strong><span class="d">3 a 4 quadros grandes por parede/área</span><div class="chips"><a class="chip" href="https://github.com/dev-seven7/cs-olivers/issues/229">olv#229</a></div></div></li>
+            <li><span class="ic">1</span><div><strong>Adesivo da porta da Área Kids</strong><span class="d">Tapa a passagem dos entregadores, pela segurança das crianças</span><div class="chips"><span class="chip">2,10 × 1,50 m</span><span class="chip wait">Confirmar medida</span></div></div></li>
+            <li><span class="ic">·</span><div><strong>Kit de salão</strong><span class="d">As mesmas peças da prioridade 1 (roleta, pulseira, broche, uniforme, cardápio)</span><div class="chips"><a class="chip" href="#p1">ver 01</a></div></div></li>
+          </ul>
+        </div>
+        <div class="deliv">
+          <h3>Divulgação</h3>
+          <ul>
+            <li><span class="ic">10+</span><div><strong>Criativos estáticos de tráfego</strong><span class="d">Pelo menos 10 estáticos diferentes pra preencher topo, meio e fundo do funil</span><div class="chips"><a class="chip" href="https://github.com/dev-seven7/cs-olivers/issues/253">olv#253</a></div></div></li>
+            <li><span class="ic">1</span><div><strong>Giveaway</strong><span class="d">Arte digital do sorteio</span><div class="chips"><a class="chip" href="https://github.com/dev-seven7/cs-olivers/issues/251">olv#251</a></div></div></li>
+            <li><span class="ic">3</span><div><strong>Kit offline</strong><span class="d">Flyer dobrável, ímã e panfleto, com QR rastreado e cupom exclusivo</span><div class="chips"><span class="chip">Arquivo pra gráfica</span><a class="chip" href="https://github.com/dev-seven7/cs-olivers/issues/254">olv#254</a></div></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 EXPANSÃO -->
+<section class="job" id="expansao" style="--c:var(--rob)">
+  <div class="wrap">
+    <span class="tag">Grupo ROB · expansão de franquias</span>
+    <h2><span class="n">05</span>Expansão</h2>
+
+    <div class="grid">
+      <div>
+        <div class="block">
+          <h3>O que já foi entregue</h3>
+          <p>A Julia entregou os <strong>30 estáticos de tráfego da expansão</strong>: 10 de topo, 10 de meio e 10 de fundo.</p>
+          <p><strong>Os estáticos são os criativos que mais estão performando</strong> no tráfego do Grupo ROB. As próximas levas saem com base nos resultados, nas últimas análises e nos planos de ação.</p>
+        </div>
+      </div>
+      <div>
+        <div class="deliv">
+          <h3>Em aberto</h3>
+          <ul>
+            <li><span class="ic">·</span><div><strong>Nova leva de estáticos</strong><span class="d">Guiada pelos resultados da leva atual</span><div class="chips"><a class="chip" href="https://github.com/dev-seven7/cs-rob-food/issues/127">rob#127</a></div></div></li>
+            <li><span class="ic">3</span><div><strong>Panfleto "Seja um franqueado"</strong><span class="d">Um por marca (Øliver's primeiro) + QR nas embalagens</span><div class="chips"><a class="chip" href="https://github.com/dev-seven7/cs-rob-food/issues/132">rob#132</a></div></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 MENSAL -->
+<section class="job" id="mensal" style="--c:var(--ink)">
+  <div class="wrap">
+    <span class="tag">Fluxo recorrente</span>
+    <h2><span class="n">06</span>Volume mensal</h2>
+
+    <div class="grid">
+      <div>
+        <div class="block">
+          <h3>Base por marca</h3>
+          <p>Cada marca renova <strong>pelo menos 10 estáticos por mês</strong>: carrossel, criativo de tráfego, divulgação de campanha e banner de canal, atualizados quando entra campanha ou combo novo.</p>
+          <p>Somando urgências (uma arte que aparece de um dia pro outro), a média fica em <strong>45 a 50 artes por mês</strong>. Em mês de lançamento ou de inauguração, isso sobe.</p>
+        </div>
+      </div>
+      <div>
+        <div class="deliv tbl">
+          <table>
+            <thead><tr><th>Marca</th><th>Estáticos/mês</th></tr></thead>
+            <tbody>
+              <tr><td>Øliver's</td><td class="num">10+</td></tr>
+              <tr><td>Temakeria</td><td class="num">10+</td></tr>
+              <tr><td>Ogro Steaks</td><td class="num">10+</td></tr>
+              <tr><td>Grupo ROB</td><td class="num">10+</td></tr>
+              <tr><td>Urgências (margem)</td><td class="num">5 a 10</td></tr>
+              <tr class="total"><td>Média mensal</td><td class="num">45 a 50</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="deliv">
+          <h3>Fora do recorrente, até 20/12</h3>
+          <p style="margin:0">Cerca de <strong>60 peças pontuais</strong> nesta esteira: as da prioridade 1, Natal, Réveillon, Região Oceânica (20 quadros, mais de 10 estáticos e o kit offline) e os panfletos da expansão.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Marketing Grupo ROB · versão de 18/11/2026. Os links "#" levam às issues no GitHub, com briefing e histórico de cada peça. Arquivos de marca, fotos e assets oficiais são enviados à parte.</div>
+</footer>
+
+</body>
+</html>
